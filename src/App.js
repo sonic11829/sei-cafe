@@ -2,9 +2,11 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import AuthPage from './pages/AuthPage/AuthPage';
+import NavBar from './components/NavBar';
 import NewOrderPage from './pages/NewOrderPage/NewOrderPage';
 import OrderHistoryPage from './pages/OrderHistoryPage/OrderHistoryPage';
-import NavBar from './components/NavBar';
+import FruitsPage from './pages/FruitsPage/FruitsPage'
+
 
 function App() {
   const [state, setState] = useState(null)
@@ -29,6 +31,7 @@ function App() {
         <>
           <NavBar />
           <Routes>
+          <Route path="/fruits" element={<FruitsPage />} />
             <Route path="/orders/new" element={<NewOrderPage />} />
             <Route path='/orders' element={<OrderHistoryPage/>} />
           </Routes>
