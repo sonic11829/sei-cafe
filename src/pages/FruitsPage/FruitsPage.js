@@ -93,7 +93,7 @@ export default function FruitsPage (props){
                     {
                         fruits.map((fruit) => {
                             return (
-                                <li>
+                                <li key={fruit._id}>
                                     {fruit.name} is {fruit.color} {fruit.readyToEat? 'and its ready to eat' : 'its not ready to eat'}
                                     <br/><button onClick={() => deleteFruit(fruit._id)}>Delete This Fruit</button>
                                 </li>

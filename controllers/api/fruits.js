@@ -43,7 +43,7 @@ const dataController = {
   },
   // Create
   create (req, res, next) {
-    req.body.readyToEat = req.body.readyToEat === 'on'
+    req.body.readyToEat = req.body.readyToEat === 'on' || req.body.readyToEat === true ? true : false
    
     Fruit.create(req.body, (err, createdFruit) => {
       if (err) {

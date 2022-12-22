@@ -1,5 +1,14 @@
-export default function AuthPage(props) {
+// AuthPage.js
+
+import SignUpForm from "../../components/SignUpForm/SignUpForm"
+import LoginForm from "../../components/LoginForm/LoginForm"
+
+export default function AuthPage(props){
     return(
-        <h1>AuthPage</h1>
+        <main>
+            <h1>Auth Page</h1>
+            <SignUpForm setUser={props.setUser} />
+            <LoginForm setUser={props.setUser} />
+        </main>
     )
 }
